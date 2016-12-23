@@ -2,21 +2,21 @@
 
 namespace Itransition\Entities\Employees;
 
-use Itransition\Interfaces\Payable as Payable;
+use Itransition\Interfaces\Payable;
 
 class Employee
 {
-	private $fullName;
-	private $salary;
+    private $fullName;
+    private $salary;
 
-	function __construct($fullName, Payable $salary)
-	{
-		$this->fullName = $fullName;
-		$this->salary = $salary;
-	}
+    function __construct($fullName, Payable $salary)
+    {
+        $this->fullName = $fullName;
+        $this->salary = $salary;
+    }
 
-	function getSalary(): float
-	{
-		return $this->salary->getSalary();
-	}
+    function getSalary(): float
+    {
+        return $this->salary->getSalary();
+    }
 }

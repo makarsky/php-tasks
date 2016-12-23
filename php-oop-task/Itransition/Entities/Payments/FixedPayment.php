@@ -2,19 +2,19 @@
 
 namespace Itransition\Entities\Payments;
 
-use Itransition\Interfaces\Payable as Payable;
+use Itransition\Interfaces\Payable;
 
 class FixedPayment implements Payable
 {
-	private $salary;
+    private $salary;
 
-	function __construct($salary)
-	{
-		$this->salary = $salary;
-	}
+    function __construct($salary)
+    {
+        $this->salary = $salary;
+    }
 
-	function getSalary(): float
-	{
-		return $this->salary;
-	}
+    function getSalary(): float
+    {
+        return $this->salary;
+    }
 }
