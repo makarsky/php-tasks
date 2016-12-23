@@ -11,13 +11,13 @@ require 'Itransition/Entities/Employees/HtmlCoder.php';
 require 'Itransition/Entities/Payments/FixedPayment.php';
 require 'Itransition/Entities/Payments/HourlyPayment.php';
 
-use Itransition\Entities\Team as Team;
-use Itransition\Entities\Employees\SeniorDeveloper as SeniorDeveloper;
-use Itransition\Entities\Employees\MiddleDeveloper as MiddleDeveloper;
-use Itransition\Entities\Employees\Designer as Designer;
-use Itransition\Entities\Employees\HtmlCoder as HtmlCoder;
-use Itransition\Entities\Payments\FixedPayment as FixedPayment;
-use Itransition\Entities\Payments\HourlyPayment as HourlyPayment;
+use Itransition\Entities\Team;
+use Itransition\Entities\Employees\SeniorDeveloper;
+use Itransition\Entities\Employees\MiddleDeveloper;
+use Itransition\Entities\Employees\Designer;
+use Itransition\Entities\Employees\HtmlCoder;
+use Itransition\Entities\Payments\FixedPayment;
+use Itransition\Entities\Payments\HourlyPayment;
 
 $team = new Team('X');
 $team->addEmployee(new Designer('John Doe', new FixedPayment(3000)));

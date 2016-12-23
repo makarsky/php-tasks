@@ -2,19 +2,19 @@
 
 namespace Itransition\Entities\Payments;
 
-use Itransition\Interfaces\Payable as Payable;
+use Itransition\Interfaces\Payable;
 
 class HourlyPayment implements Payable
 {
-	private $salary;
+    private $salary;
 
-	function __construct($salary, $hours)
-	{
-		$this->salary = $salary * $hours;
-	}
+    function __construct($salary, $hours)
+    {
+        $this->salary = $salary * $hours;
+    }
 
-	function getSalary(): float
-	{
-		return $this->salary;
-	}
+    function getSalary(): float
+    {
+    return $this->salary;
+    }
 }
