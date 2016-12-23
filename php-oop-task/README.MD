@@ -1,16 +1,14 @@
-Задание по ООП в PHP
+Php OOP task
 
-Реализовать систему классов для следующей задачи: у IT компании есть Команды, в которых могут быть задействованы Работники разных профессий: Разработчики, Верстальщики, Дизайнеры. Каждый Работник должен иметь ФИО и метод подсчета своей зарплаты. Зарплата может быть фиксированной, либо высчитываться исходя из почасовой ставки и отработанных часов (например, в одном случае работа дизайнера в команде стоит 1000 рублей в месяц, а в другом - дизайнер нанимается только на 40 часов со ставкой 8 рублей в час).
+Implement a system of classes for the next task: IT company has teams in which may be involved employees of different professions: developers, designers and html coders. Each employee must have a name and a method of calculation of his salary. Payment can be fixed or calculated on the basis of an hourly rate and hours worked (for example, in one case, the work of a designer is worth $1000 a month, and in another - a designer is hired only for 40 hours at a rate of $8 per hour).
 
-1. Создать систему классов для всех типов Работников, учитывая что каждый из них может иметь как фиксированную оплату, так и почасовую.
+1. Create a system of classes for all types of workers, given that each of them can have a wage and a salary.
+2. Create a team with the name "X", which will include the following staff:
+    1 Designer, $3000 salary
+    1 Senior Developer, 60 hours with payment of $10 per hour
+    2 Middle Developers. $1000 salary
+    1 Html coder, 120 hours with payment of $5 per hour
 
-2. Создать Команду с названием “Х”, в которой будут работать:
-    - 1 дизайнер, фиксированная оплата 3000 рублей
-    - 1 Senior Developer, нанятый на 60ч с оплатой 10 рублей в час
-    - 2 Middle Developer. Фиксированная оплата 1000 рублей в месяц
-    - 1 верстальщик, 120ч с оплатой 5 рублей в час
+Find the total amount needed to pay the team as a whole.
 
-Вывести общую сумму, необходимую для выплаты зарплаты Команде в целом.
-
-Запуск
-php index.php
+Launch the application via index.php
