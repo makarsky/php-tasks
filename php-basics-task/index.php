@@ -10,9 +10,7 @@ if (php_sapi_name() != 'cli') {
 
 function showTree($folder, $indent)
 {
-
     $files = scandir($folder);
-
     foreach ($files as $file) {
         if (($file == '.') || ($file == '..')) {
             continue;
