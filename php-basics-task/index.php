@@ -1,44 +1,32 @@
 <?php
-$lineBreak = "\n";
-$orderedListOpenTag = '';
-$orderedListCloseTag = '';
-$liOpenTag = "";
-$liCloseTag = "";
+
+$preOpenTag = '';
+$preCloseTag = '';
 
 if (php_sapi_name() != 'cli') {
-    $lineBreak = "";
-    $orderedListOpenTag = '<ol>';
-    $orderedListCloseTag = '</ol>';
-    $liOpenTag = "<li>";
-    $liCloseTag = "</li>";
+    $preOpenTag = '<pre>';
+    $preCloseTag = '</pre>';
 }
 
-function showTree($folder, $space)
+function showTree($folder, $indent)
 {
-    global $lineBreak, $orderedListOpenTag, $orderedListCloseTag, $liOpenTag, $liCloseTag;
 
     $files = scandir($folder);
 
-    foreach($files as $file) {
-
+    foreach ($files as $file) {
         if (($file == '.') || ($file == '..')) {
             continue;
         }
-
-        $path = $folder.'/'.$file;
-        
+        $path = $folder . '/' . $file;
         if (is_link($path) || !is_dir($path) || (is_dir($path) && !is_readable($path))) {
-            echo $liOpenTag.$space.$file.$liCloseTag.$lineBreak;
-        }
-        else {
-            echo $liOpenTag.$space.$file.$liCloseTag.$lineBreak;
-            echo $orderedListOpenTag;
-            showTree($path, $space.'   ');
-            echo $orderedListCloseTag;
+            echo $indent . $file . "\n";
+        } else {
+            echo $indent . $file . "\n";
+            showTree($path, $indent . '   ');
         }
     }
 }
 
-echo $orderedListOpenTag;
+echo $preOpenTag;
 showTree("./", "");
-echo $orderedListCloseTag;
+echo $preCloseTag;
