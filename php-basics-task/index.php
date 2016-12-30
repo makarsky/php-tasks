@@ -20,7 +20,7 @@ function showTree($folder, $indent)
             echo $indent . $file . "\n";
         } else {
             echo $indent . $file . "\n";
-            showTree($path, $indent . '   ');
+            showTree($path, $indent . "\t");
         }
     }
 }
