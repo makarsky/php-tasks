@@ -6,7 +6,7 @@ use Itransition\Entities\Employees\Employee;
 
 class Team implements Payable
 {
-    public $title;
+    private $title;
     private $team = [];
 
     public function __construct($title)
