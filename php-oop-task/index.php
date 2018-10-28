@@ -1,5 +1,4 @@
 <?php
-
 require 'Itransition/Interfaces/Payable.php';
 require 'Itransition/Entities/Team.php';
 require 'Itransition/Entities/Employees/Employee.php';
