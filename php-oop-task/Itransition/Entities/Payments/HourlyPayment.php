@@ -15,6 +15,6 @@ class HourlyPayment implements Payable
 
     function getSalary(): float
     {
-    return $this->salary;
+        return $this->salary;
     }
 }

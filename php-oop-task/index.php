@@ -1,14 +1,9 @@
 <?php
-require 'Itransition/Interfaces/Payable.php';
-require 'Itransition/Entities/Team.php';
-require 'Itransition/Entities/Employees/Employee.php';
-require 'Itransition/Entities/Employees/Developer.php';
-require 'Itransition/Entities/Employees/SeniorDeveloper.php';
-require 'Itransition/Entities/Employees/MiddleDeveloper.php';
-require 'Itransition/Entities/Employees/Designer.php';
-require 'Itransition/Entities/Employees/HtmlCoder.php';
-require 'Itransition/Entities/Payments/FixedPayment.php';
-require 'Itransition/Entities/Payments/HourlyPayment.php';
+
+spl_autoload_register(function($classname) {
+    $classname = str_replace('\\', '/', $classname);
+    require_once(__DIR__ . "/$classname.php");
+});
 
 use Itransition\Entities\Team;
 use Itransition\Entities\Employees\SeniorDeveloper;
