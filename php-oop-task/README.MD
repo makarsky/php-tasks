@@ -11,4 +11,5 @@ Implement a system of classes for the next task: IT company has teams in which m
 
 Find the total amount needed to pay the team as a whole.
 
-Launch the application via index.php
+Launch the application via terminal:
+```php index.php```
